@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(31,38,44);
+    font-family:cursive;
+}
+
+.container{
+  margin:33px;
+}
+
+.container h3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+/* Turn Section Css */
+.turn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 3.5em;
+    margin:auto;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0,0.5);
+}
+
+.inset{
+    box-shadow: inset 5px 5px 12px rgba(0, 0, 0,0.8);
+}
+
+.turn1, .turn2{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding: 6px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.turn1{
+    color: red;
+}
+
+.turn2{
+    color: blue;
+}
+
+/* Game section Css */
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.gamers{
+    display: grid;
+    grid-template-columns: repeat(3,8vw);
+    grid-template-rows: repeat(3,8vw);
+}
+
+.box{
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    font-size: 5vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+
+.box:nth-child(6) ~ div{
+    border-bottom: none;
+}
+
+.content{
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-bottom: 34px;
+    font-weight: 900;
+}
+
+/* Reset button Css */
+.btn{
+    width: 10%;
+    height: 7%;
+    font-size: 29px;
+    border-radius: 50px;
+    margin-left: 45%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+/* gif css */
+.gif{
+    position: absolute;
+    right: 6%;
+    mix-blend-mode: multiply;
+    display: none;
+}
+
+.gif img{
+    width: 20em;
+}
+
+/* Media Query */
+@media(max-width: 780px){
+    .gamers{
+        grid-template-columns: repeat(3, 18vw);
+        grid-template-rows: repeat(3, 18vw);
+    }
+
+    .game-container{
+        margin-bottom: 29px;
+    }
+
+    .box{
+       font-size: 14vw;
+    }
+
+    .btn{
+        width: 35%;
+        margin-left: 32%;
+    }
+
+    .gif{
+        right: 26%;
+        bottom: -265px;
+    }
+
+    .gif img{
+        width: 6em;
+    }
+}
